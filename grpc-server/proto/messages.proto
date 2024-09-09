@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package messages;
+
+// The gRPC service definition
+service MessageService {
+  // Sends a message and gets a response
+  rpc SendMessage (MessageRequest) returns (MessageResponse);
+}
+
+// Request message containing the user's message
+message MessageRequest {
+  string message = 1;
+}
+
+// Response message containing the server's reply
+message MessageResponse {
+  string reply = 1;
+}
