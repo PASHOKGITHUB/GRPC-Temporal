@@ -11,9 +11,15 @@
   "license": "ISC",
   "dependencies": {
     "@grpc/grpc-js": "^1.11.2",
-    "@grpc/proto-loader": "^0.7.13"
+    "@grpc/proto-loader": "^0.7.13",
+    "@temporalio/client": "^1.11.1",
+    "@temporalio/worker": "^1.11.1",
+    "@temporalio/workflow": "^1.11.1"
   },
   "devDependencies": {
+    "@temporalio/common": "^1.11.1",
+    "@types/estree": "^1.0.5",
+    "@types/json-schema": "^7.0.15",
     "@types/node": "^22.5.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4"
