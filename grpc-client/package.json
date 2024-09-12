@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run worker && npm run client",
+    "worker": "ts-node src/worker.ts",
+    "client": "ts-node src/client.ts",
+    "dev": "concurrently \"npm run worker\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
@@ -21,6 +25,7 @@
     "@types/estree": "^1.0.5",
     "@types/json-schema": "^7.0.15",
     "@types/node": "^22.5.4",
+    "concurrently": "^9.0.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4"
   }

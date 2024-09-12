@@ -2,18 +2,14 @@ syntax = "proto3";
 
 package messages;
 
-// The gRPC service definition
 service MessageService {
-  // Sends a message and gets a response
-  rpc SendMessage (MessageRequest) returns (MessageResponse);
+  rpc CheckUserExistence (UserIdRequest) returns (UserExistenceResponse);
 }
 
-// Request message containing the user's message
-message MessageRequest {
-  string message = 1;
+message UserIdRequest {
+  string userId = 1;
 }
 
-// Response message containing the server's reply
-message MessageResponse {
-  string reply = 1;
+message UserExistenceResponse {
+  bool exists = 1;
 }
