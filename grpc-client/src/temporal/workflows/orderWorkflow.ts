@@ -1,16 +1,4 @@
-// import { proxyActivities } from '@temporalio/workflow';
-// import type * as orderActivities from '../activities/orderActivities';
 
-// const { placeOrderActivity } = proxyActivities<typeof orderActivities>({
-//   startToCloseTimeout: '10 minutes',
-// });
-
-// export async function placeOrderWorkflow(productId: string, quantity: number): Promise<string> {
-//     console.log("Workflow received productId and quantity:", productId, quantity);  // Log inputs
-//     const result = await placeOrderActivity(productId, quantity);
-//     return result;
-//   }
-//-------------------------------------------------------------------------------------
 import { proxyActivities } from '@temporalio/workflow';
 import type * as userActivities from '../activities/userActivities';
 import type * as orderActivities from '../activities/orderActivities';
@@ -32,7 +20,7 @@ export async function placeOrderWorkflow(userId: string, productId: string, quan
   }
 
   // If user exists, proceed with order placement
-  const orderResult = await placeOrderActivity(productId, quantity);
+  const orderResult = await placeOrderActivity(productId, quantity);3
   
   return orderResult; // Return result of the order placement
 }
